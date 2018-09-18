@@ -3,6 +3,7 @@ package ifal.edu.tarde.br.SistemaLoja.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,7 +14,8 @@ public class Categoria {
 	@Id
 	@GeneratedValue
 	private Integer id;
-
+    
+	@Column
 	private String nome;
 	
 	@OneToMany(cascade = CascadeType.ALL)
@@ -39,7 +41,7 @@ public class Categoria {
 
 	public Integer getId() {
 		return id;
-	}	    Cliente cliente1 = new Cliente();
+	}
 	public void setId(Integer id) {
 		this.id = id;
 	}

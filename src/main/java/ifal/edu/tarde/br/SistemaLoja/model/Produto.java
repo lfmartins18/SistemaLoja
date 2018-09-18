@@ -1,5 +1,6 @@
 package ifal.edu.tarde.br.SistemaLoja.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,8 +12,11 @@ public class Produto {
 	@GeneratedValue
 	private Integer id;
 
+	@Column
 	private String nome;
+	@Column
 	private Integer quant;
+	@Column
 	private Double valorProduto;
 
 	public Produto() {

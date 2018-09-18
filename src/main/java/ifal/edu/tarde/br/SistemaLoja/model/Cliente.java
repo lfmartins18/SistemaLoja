@@ -2,6 +2,7 @@ package ifal.edu.tarde.br.SistemaLoja.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,11 +13,15 @@ public class Cliente {
 	@Id
 	@GeneratedValue
 	private Integer id;
-
-	private String nomeCompleto;
-	private Date dataNascimento;
-	private String email;
-	private Integer senha;
+   
+	@Column
+    private String nomeCompleto;
+    @Column
+    private Date dataNascimento;
+    @Column
+    private String email;
+    @Column
+    private Integer senha;
 
 
 	public Cliente() {

@@ -11,12 +11,11 @@ public class Usuario {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
-	@Column
+
+    @Column
 	private String nome;
-	
-	@Column
-	private String senha;
+    @Column
+    private String senha;
 
 	public Integer getId() {
 		return id;
