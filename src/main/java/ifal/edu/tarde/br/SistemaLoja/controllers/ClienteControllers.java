@@ -12,7 +12,7 @@ import ifal.edu.tarde.br.SistemaLoja.model.Cliente;
 import ifal.edu.tarde.br.SistemaLoja.repositories.ClienteRepository;
 
 @Controller
-@RequestMapping
+@RequestMapping("/cliente")
 public class ClienteControllers {
 	
 	@Autowired
