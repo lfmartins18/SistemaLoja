@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+   <title>Form cliente</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+    
+    <body>
+    <div class="container">
+ 
+  <form th:action="@{/cliente/save}" th:object="${cliente}" method="POST">
+    
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" placeholder="Enter name" th:field="*{nomeCompleto}">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" placeholder="Enter email" th:field="*{email}">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" > Lembrar-me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Enviar</button>
+  </form>
+</div>
+    
+    </body>
+</html>
