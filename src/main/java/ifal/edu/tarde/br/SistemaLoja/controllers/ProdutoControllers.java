@@ -21,7 +21,7 @@ public class ProdutoControllers {
 	@GetMapping(value= "/list1")
 	public String list(ModelMap model) {
 		List<Produto> produtos = produtoRepository.findAll();
-		model.addAttribute("clienteList", produtos);
+		model.addAttribute("produtoList", produtos);
 		
 		return "produto/list1";
 	}
